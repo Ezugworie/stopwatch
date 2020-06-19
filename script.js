@@ -12,15 +12,6 @@ resetButton = document.getElementById('reset');
 timerDisplay = document.getElementById('time-display');
 
 
-
-
-let i = 0;
-
-function increment() {
-  i++;
-  console.log(i);
-}
-
 let timeout;
 let hours = 0;
 let minutes = 0;
@@ -71,14 +62,12 @@ function displayTimer() {
     }else{
         document.getElementById('time-display').innerHTML = hours + ':' + minutes + ':' + seconds;
     }
-    console.log(hours + ':' + minutes + ':'+ seconds);
     
 }
 
 function stopTimer() {
     // console.log('timer stopped');
  clearTimeout(timeout, 1000);
- console.log('Timer Stopped');
  
 }
 
@@ -86,7 +75,6 @@ function resetTimer() {
     seconds = 0;
     minutes = 0;
     hours = 0;
-    console.log('Timer resset');
     document.getElementById('time-display').innerHTML = '0'+hours + ':' + '0'+minutes + ':' + '0'+seconds;
 
 }
